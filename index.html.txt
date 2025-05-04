@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Подбор займов онлайн</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #fff;
+      margin-top: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+    .intro {
+      font-size: 15px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+    .offer {
+      background: #fafafa;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+    .offer h2 {
+      font-size: 17px;
+      margin: 0 0 8px;
+      color: #222;
+    }
+    .offer p {
+      margin: 5px 0;
+      font-size: 14px;
+      color: #444;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 12px 18px;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 15px;
+      transition: background 0.2s ease-in-out;
+    }
+    .btn:hover {
+      background-color: #43a047;
+    }
+    .footer {
+      font-size: 13px;
+      text-align: center;
+      color: #888;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎯 Подходящие займы для вас</h1>
+    <p class="intro">Мы нашли 3 предложения, которые чаще всего одобряют. Выберите лучшее и заполните заявку:</p>
+
+    <div class="offer">
+      <h2>🟢 А-Деньги</h2>
+      <p><strong>Сумма:</strong> до 70 000 ₽</p>
+      <p><strong>Скорость:</strong> деньги за 10 минут</p>
+      <p><strong>Особенность:</strong> без звонков</p>
+      <a class="btn" href="https://my.saleads.pro/s/2rzog" target="_blank">Получить займ</a>
+    </div>
+
+    <div class="offer">
+      <h2>🟡 Монеткин</h2>
+      <p><strong>Сумма:</strong> до 100 000 ₽</p>
+      <p><strong>Скорость:</strong> 1 анкета — 20+ офферов</p>
+      <p><strong>Особенность:</strong> высокая конверсия</p>
+      <a class="btn" href="https://my.saleads.pro/s/bfeij" target="_blank">Заполнить заявку</a>
+    </div>
+
+    <div class="offer">
+      <h2>🔵 Заем.ру</h2>
+      <p><strong>Сумма:</strong> до 50 000 ₽</p>
+      <p><strong>Скорость:</strong> зачисление в течение часа</p>
+      <p><strong>Особенность:</strong> выдача с плохой КИ</p>
+      <a class="btn" href="https://my.saleads.pro/s/Jsxq2" target="_blank">Оформить займ</a>
+    </div>
+
+    <div class="footer">
+      Все заявки обрабатываются онлайн и без выходных
+    </div>
+  </div>
+</body>
+</html>
