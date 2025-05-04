@@ -19,15 +19,29 @@
       margin-top: 40px;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 0.6s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
     h1 {
-      font-size: 20px;
+      font-size: 22px;
       margin-bottom: 10px;
       color: #333;
+      text-align: center;
     }
     .intro {
       font-size: 15px;
       color: #555;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .timer {
+      font-size: 16px;
+      font-weight: bold;
+      color: #d32f2f;
+      text-align: center;
       margin-bottom: 20px;
     }
     .offer {
@@ -38,7 +52,7 @@
       margin-bottom: 15px;
     }
     .offer h2 {
-      font-size: 17px;
+      font-size: 18px;
       margin: 0 0 8px;
       color: #222;
     }
@@ -50,14 +64,16 @@
     .btn {
       display: inline-block;
       margin-top: 10px;
-      padding: 12px 18px;
+      padding: 14px 20px;
       background-color: #4CAF50;
       color: white;
       text-decoration: none;
       border-radius: 6px;
       font-weight: bold;
-      font-size: 15px;
+      font-size: 16px;
       transition: background 0.2s ease-in-out;
+      width: 100%;
+      text-align: center;
     }
     .btn:hover {
       background-color: #43a047;
@@ -69,11 +85,36 @@
       margin-top: 20px;
     }
   </style>
+  <script>
+    function startTimer(duration, display) {
+      let timer = duration, minutes, seconds;
+      setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = "⚡ Специальные предложения действуют ещё: " + minutes + ":" + seconds;
+
+        if (--timer < 0) {
+          timer = duration;
+        }
+      }, 1000);
+    }
+
+    window.onload = function () {
+      const fiveMinutes = 60 * 5;
+      const display = document.querySelector('#timer');
+      startTimer(fiveMinutes, display);
+    };
+  </script>
 </head>
 <body>
   <div class="container">
     <h1>🎯 Подходящие займы для вас</h1>
     <p class="intro">Мы нашли 3 предложения, которые чаще всего одобряют. Выберите лучшее и заполните заявку:</p>
+    <div id="timer" class="timer"></div>
 
     <div class="offer">
       <h2>🟢 А-Деньги</h2>
@@ -105,3 +146,4 @@
   </div>
 </body>
 </html>
+
