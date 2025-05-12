@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Подбор займов онлайн</title>
+  <title>Финансовая подборка с отзывами</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f0f2f5;
+      background: #f3f5f9;
       margin: 0;
       padding: 0;
     }
@@ -16,26 +16,82 @@
       margin: 0 auto;
       padding: 20px;
       background: #fff;
-      margin-top: 40px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      animation: fadeIn 0.6s ease-in-out;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
+      margin-top: 30px;
+      border-radius: 14px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     }
     h1 {
       font-size: 22px;
       margin-bottom: 10px;
-      color: #333;
-      text-align: center;
+      color: #222;
     }
     .intro {
       font-size: 15px;
-      color: #555;
+      color: #444;
       margin-bottom: 20px;
-      text-align: center;
+    }
+    .quiz {
+      margin-bottom: 20px;
+    }
+    .quiz label {
+      display: block;
+      margin: 8px 0 5px;
+      font-weight: bold;
+    }
+    .quiz select, .quiz input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      background-color: #2f80ed;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+    .btn:hover {
+      background-color: #1c64d1;
+    }
+    .offer {
+      background: #eef2f7;
+      border: 1px solid #dce0e5;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+    .offer h2 {
+      font-size: 18px;
+      margin: 0 0 6px;
+      color: #111;
+    }
+    .offer p {
+      margin: 4px 0;
+      font-size: 14px;
+      color: #333;
+    }
+    .reviews {
+      background: #fafafa;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 25px;
+    }
+    .review {
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+    .review strong {
+      display: block;
+      color: #222;
+      margin-bottom: 3px;
     }
     .timer {
       font-size: 16px;
@@ -44,105 +100,97 @@
       text-align: center;
       margin-bottom: 20px;
     }
-    .offer {
-      background: #fafafa;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      padding: 15px;
-      margin-bottom: 15px;
-    }
-    .offer h2 {
-      font-size: 18px;
-      margin: 0 0 8px;
-      color: #222;
-    }
-    .offer p {
-      margin: 5px 0;
-      font-size: 14px;
-      color: #444;
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 14px 20px;
-      background-color: #4CAF50;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-      font-size: 16px;
-      transition: background 0.2s ease-in-out;
-      width: 100%;
-      text-align: center;
-    }
-    .btn:hover {
-      background-color: #43a047;
-    }
-    .footer {
-      font-size: 13px;
-      text-align: center;
-      color: #888;
-      margin-top: 20px;
+    @media screen and (max-width: 480px) {
+      .container {
+        margin: 10px;
+        padding: 15px;
+      }
     }
   </style>
-  <script>
-    function startTimer(duration, display) {
-      let timer = duration, minutes, seconds;
-      setInterval(function () {
-        minutes = parseInt(timer / 60, 10);
-        seconds = parseInt(timer % 60, 10);
-
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-
-        display.textContent = "⚡ Специальные предложения действуют ещё: " + minutes + ":" + seconds;
-
-        if (--timer < 0) {
-          timer = duration;
-        }
-      }, 1000);
-    }
-
-    window.onload = function () {
-      const fiveMinutes = 60 * 5;
-      const display = document.querySelector('#timer');
-      startTimer(fiveMinutes, display);
-    };
-  </script>
 </head>
 <body>
   <div class="container">
-    <h1>🎯 Подходящие займы для вас</h1>
-    <p class="intro">Мы нашли 3 предложения, которые чаще всего одобряют. Выберите лучшее и заполните заявку:</p>
-    <div id="timer" class="timer"></div>
+    <h1>Какая сумма вам нужна?</h1>
+    <p class="intro">Ответьте на несколько вопросов и получите персональный список офферов 👇</p>
 
-    <div class="offer">
-      <h2>🟢 А-Деньги</h2>
-      <p><strong>Сумма:</strong> до 70 000 ₽</p>
-      <p><strong>Скорость:</strong> деньги за 10 минут</p>
-      <p><strong>Особенность:</strong> без звонков</p>
-      <a class="btn" href="https://my.saleads.pro/s/2rzog" target="_blank">Получить займ</a>
+    <div class="timer" id="timer">Осталось 10:00 минут для активации подборки</div>
+
+    <div class="quiz">
+      <label for="amount">Выберите сумму</label>
+      <select id="amount">
+        <option value="30000">до 30 000 ₽</option>
+        <option value="50000">до 50 000 ₽</option>
+        <option value="70000">до 70 000 ₽</option>
+        <option value="100000">до 100 000 ₽</option>
+      </select>
+
+      <label for="region">Ваш регион</label>
+      <input type="text" id="region" placeholder="Например: Пермь" />
     </div>
 
-    <div class="offer">
-      <h2>🟡 Монеткин</h2>
-      <p><strong>Сумма:</strong> до 100 000 ₽</p>
-      <p><strong>Скорость:</strong> 1 анкета — 20+ офферов</p>
-      <p><strong>Особенность:</strong> высокая конверсия</p>
-      <a class="btn" href="https://my.saleads.pro/s/bfeij" target="_blank">Заполнить заявку</a>
+    <button class="btn" onclick="showOffers()">Подобрать предложения</button>
+
+    <div id="offers" style="display:none;">
+      <div class="offer">
+        <h2>🟢 А-Деньги</h2>
+        <p><strong>Сумма:</strong> до 70 000 ₽</p>
+        <p><strong>Особенность:</strong> без звонков</p>
+        <a class="btn" href="https://my.saleads.pro/s/2rzog" target="_blank">Получить займ</a>
+      </div>
+
+      <div class="offer">
+        <h2>🟡 Монеткин</h2>
+        <p><strong>Сумма:</strong> до 100 000 ₽</p>
+        <p><strong>Особенность:</strong> 1 анкета — 20+ офферов</p>
+        <a class="btn" href="https://my.saleads.pro/s/bfeij" target="_blank">Оформить заявку</a>
+      </div>
+
+      <div class="offer">
+        <h2>🔵 Заём.ру</h2>
+        <p><strong>Сумма:</strong> до 50 000 ₽</p>
+        <p><strong>Особенность:</strong> выдают даже с плохой КИ</p>
+        <a class="btn" href="https://my.saleads.pro/s/Jsxq2" target="_blank">Перейти</a>
+      </div>
     </div>
 
-    <div class="offer">
-      <h2>🔵 Заем.ру</h2>
-      <p><strong>Сумма:</strong> до 50 000 ₽</p>
-      <p><strong>Скорость:</strong> зачисление в течение часа</p>
-      <p><strong>Особенность:</strong> выдача с плохой КИ</p>
-      <a class="btn" href="https://my.saleads.pro/s/Jsxq2" target="_blank">Оформить займ</a>
-    </div>
-
-    <div class="footer">
-      Все заявки обрабатываются онлайн и без выходных
+    <div class="reviews">
+      <h3>Отзывы:</h3>
+      <div class="review">
+        <strong>Михаил (Пенза):</strong>
+        Думал не одобрят, а деньги пришли на карту уже через 10 минут.
+      </div>
+      <div class="review">
+        <strong>Анна (Казань):</strong>
+        Оформила без звонков, очень удобно. Спасибо!
+      </div>
+      <div class="review">
+        <strong>Игорь (Омск):</strong>
+        Работает. Получил 50к без визита в офис.
+      </div>
     </div>
   </div>
+
+  <script>
+    function showOffers() {
+      document.getElementById("offers").style.display = "block";
+    }
+
+    // Таймер на 10 минут
+    let seconds = 600;
+    const timerEl = document.getElementById("timer");
+
+    const countdown = setInterval(() => {
+      let min = Math.floor(seconds / 60);
+      let sec = seconds % 60;
+      if (sec < 10) sec = "0" + sec;
+      timerEl.textContent = `Осталось ${min}:${sec} минут для активации подборки`;
+      if (seconds <= 0) {
+        clearInterval(countdown);
+        timerEl.textContent = "Время вышло — обновите страницу для новой попытки.";
+      }
+      seconds--;
+    }, 1000);
+  </script>
 </body>
 </html>
+
